@@ -4,6 +4,7 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+import static org.example.App.Mod;
 import static org.example.App.returnFizzBuzz;
 
 /**
@@ -44,11 +45,11 @@ public class AppTest
         for (int i = 0; i<=100; i++){
             strFizzBuzz = returnFizzBuzz(i);
 
-            if (Math.ceilMod(i,15) == 0) {
+            if (Mod(i,15) == 0) {
                 assertEquals("FizzBuzz", strFizzBuzz);
-            } else if (Math.ceilMod(i,5) == 0) {
+            } else if (Mod(i,5) == 0) {
                 assertEquals("Buzz", strFizzBuzz);
-            }else if (Math.ceilMod(i,3) == 0) {
+            }else if (Mod(i,3) == 0) {
                 assertEquals("Fizz", strFizzBuzz);
             } else {
                 assertEquals(Integer.toString(i), strFizzBuzz);

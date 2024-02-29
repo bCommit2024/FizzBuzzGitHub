@@ -7,14 +7,18 @@ package org.example;
 public class App 
 {
     public static String returnFizzBuzz(int num){
-        if (Math.ceilMod(num,15)==0){
+        if (Mod(num,15)==0){
             return "FizzBuzz";
-        }else if (Math.ceilMod(num,5)==0){
+        }else if (Mod(num,5)==0){
             return "Buzz";
-        }else if (Math.ceilMod(num,3)==0){
+        }else if (Mod(num,3)==0){
             return "Fizz";
         }else{
             return Integer.toString(num);
         }
+    }
+
+    public static int Mod(int num, int div){
+        return (num/div) - (Math.floorDiv(num,div) * div);
     }
 }
