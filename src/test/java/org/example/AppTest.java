@@ -41,6 +41,17 @@ public class AppTest
     {assertTrue( true );}
 
     public void testFizzBuzz(){
+        assertEquals("1",returnFizzBuzz(1));
+        assertEquals("2",returnFizzBuzz(2));
+        assertEquals("Fizz",returnFizzBuzz(3));
+        assertEquals("4",returnFizzBuzz(4));
+        assertEquals("Buzz",returnFizzBuzz(5));
+        assertEquals("Fizz",returnFizzBuzz(6));
+        assertEquals("7",returnFizzBuzz(7));
+        assertEquals("8",returnFizzBuzz(8));
+        assertEquals("Fizz",returnFizzBuzz(9));
+        assertEquals("Buzz",returnFizzBuzz(10));
+
         String strFizzBuzz;
         for (int i = 0; i<=100; i++){
             strFizzBuzz = returnFizzBuzz(i);
