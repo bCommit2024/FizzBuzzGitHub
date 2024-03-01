@@ -38,7 +38,7 @@ public class AppTest
     public void testApp()
     {assertTrue( true );}
 
-    public void testFizzBuzz(){
+    public void testFizzBuzz1To10(){
         assertEquals("1",returnFizzBuzz(1));
         assertEquals("Fizz",returnFizzBuzz(3));
         assertEquals("4",returnFizzBuzz(4));
@@ -49,4 +49,28 @@ public class AppTest
         assertEquals("Fizz",returnFizzBuzz(9));
         assertEquals("Buzz",returnFizzBuzz(10));
     }
+    public void testFizzBuzz1To100(){
+        String strFizzBuzz;
+        for (int i = 0; i<=100; i++){
+            strFizzBuzz = returnFizzBuzz(i);
+
+            if (recursiveDiv(i,15)== 0) {
+                assertEquals("FizzBuzz", strFizzBuzz);
+            } else if (recursiveDiv(i,5) == 0) {
+                assertEquals("Buzz", strFizzBuzz);
+            }else if (recursiveDiv(i,3) == 0) {
+                assertEquals("Fizz", strFizzBuzz);
+            } else {
+                assertEquals(Integer.toString(i), strFizzBuzz);
+            }
+        }
+    }
+    private int recursiveDiv(int i, int div) {
+        if(i>=div){
+            return recursiveDiv(i-div,div);
+        }else{
+            return i;
+        }
+    }
+
 }
