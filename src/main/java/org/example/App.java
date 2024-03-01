@@ -18,8 +18,9 @@ public class App
             return "Buzz";
         }else if ((num % 3)==0){
             return "Fizz";
+        } else{
+            return Integer.toString(num);
         }
-        return "";
     }
 
 }
